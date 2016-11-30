@@ -1,8 +1,10 @@
 var http = require('http');
+var multiply = require('./multiply-module');
 
 function onRequest(request, response){
   response.writeHead(200, {'Content-Type': 'text/plain'});
-  response.write('Hello world');
+  response.write(multiply.moduleMessage);
+  multiply.logProduct(3, 14);
   response.end();
 }
 
