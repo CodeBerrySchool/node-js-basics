@@ -7,3 +7,4 @@ function onRequest(request, response){
 }
 
 http.createServer(onRequest).listen(3000);
+console.log('The server is running...');
